@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Face Recognition Voting System</h1>
+
+    <video id="video" autoplay muted></video>
+    <br>
+
+    <button id="scanBtn">Scan Face</button>
+
+    <p id="user"></p>
+
+    <h2>Vote</h2>
+    <button onclick="vote('A')">Party A</button>
+    <button onclick="vote('B')">Party B</button>
+    <button onclick="vote('C')">Party C</button>
+
+    <h2>Live Results</h2>
+    <div id="results"></div>
+
+</div>
+
+<script src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

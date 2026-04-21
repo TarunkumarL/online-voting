@@ -1,0 +1,130 @@
+/* ----------- GLOBAL ----------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #fff;
+    text-align: center;
+
+    /* Custom background image */
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("image/voting-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ----------- MAIN CONTAINER ----------- */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+h1 {
+    margin-top: 25px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* ----------- VIDEO ----------- */
+video {
+    margin-top: 15px;
+    width: 340px;
+    height: 260px;
+    border-radius: 15px;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ----------- CARD STYLE ----------- */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
+}
+
+/* ----------- BUTTONS ----------- */
+button {
+    padding: 12px 18px;
+    margin: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* Scan Button */
+#scanBtn {
+    background: #00c6ff;
+    color: white;
+}
+
+#scanBtn:hover {
+    background: #0099cc;
+    transform: scale(1.05);
+}
+
+/* Voting Buttons */
+button:nth-of-type(2) {
+    background: #28a745;
+}
+button:nth-of-type(3) {
+    background: #ffc107;
+    color: black;
+}
+button:nth-of-type(4) {
+    background: #dc3545;
+}
+
+/* Hover effect for all vote buttons */
+button:nth-of-type(n+2):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ----------- USER INFO ----------- */
+#user {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* ----------- RESULTS ----------- */
+#results {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.3);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ----------- SECTION HEADINGS ----------- */
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 500px) {
+    video {
+        width: 90%;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
